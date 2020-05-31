@@ -344,7 +344,7 @@ class ExplicitVocab(SubwordVocab):
         self._indexer = indexer
 
     @property
-    def word_index(self) -> dict:
+    def word_index(self) -> Dict[str, int]:
         return self._index
 
     @property
@@ -352,11 +352,11 @@ class ExplicitVocab(SubwordVocab):
         return self._indexer
 
     @property
-    def words(self) -> list:
+    def words(self) -> List[str]:
         return self._words
 
     @staticmethod
-    def chunk_identifier():
+    def chunk_identifier() -> ChunkIdentifier:
         return ChunkIdentifier.ExplicitSubwordVocab
 
     @staticmethod
